@@ -30,6 +30,18 @@ function playGame() {
 		$('.action').hide();
 		$('.ryu-ready').show();
 	});
+
+	$('.mute-button').on('mousedown', function() {
+		$(this).hide();
+		$('#theme-music').trigger('pause');
+		$('.play-button').show();
+	});
+
+	$('.play-button').on('mousedown', function() {
+		$(this).hide();
+		$('#theme-music').trigger('play');
+		$('.mute-button').show();
+	});
 	
 	$('body').on('keydown',function(e) {
 	    if (e.keyCode == 88) {
@@ -56,6 +68,8 @@ function playHadouken () {
 
 
 function introduction() {
+  $('#theme-music')[0].volume = 0.3;
+  $('#theme-music')[0].play();
   $('.sf-logo').fadeIn(3500, function() {
     $(this).fadeOut(1000, function() {
       $('.brought-by').fadeIn(1500, function() {
@@ -74,3 +88,4 @@ function introduction() {
     })
   })
 };
+

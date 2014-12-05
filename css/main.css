@@ -160,3 +160,27 @@ background-repeat: no-repeat;
 .bottom-instructions > span {
 	margin-left:75px;
 }
+
+.mute-button {
+	background-image: url('../images/mute.png');
+	background-repeat:no-repeat;
+	border-radius:10px;
+	display:block;
+	position:absolute;
+	width:45px;
+	height:28px;
+	margin-left:510px;
+	margin-top:40px;
+}
+
+.play-button {
+	display:none;
+	background-image: url('../images/play.png');
+	background-repeat:no-repeat;
+	border-radius:10px;
+	position:absolute;
+	width:45px;
+	height:28px;
+	margin-left:510px;
+	margin-top:40px;
+}
